@@ -89,6 +89,48 @@ def getdata():
     except Exception as e:
         return str(e), 500
     
+@app.route('/forget_password/<int:id>', methods=['PUT'])
+def forget_password(id):
+    try:
+        data = request.get_json()
+        new_password = data['password']
+
+        # Connect to the database
+        mydb = mysql.connector.connect(
+            host="localhost",
+            port=3306,
+            user="root",  # Provide the correct username
+            password="",  # Provide the correct password
+            database="api_validation"
+        )
+
+        # Create a cursor
+        cursor = mydb.cursor()
+
+        # Execute a SQL query
+        query = "UPDATE apiuser SET password = %s WHERE ID = %s;"
+        cursor.execute(query, (new_password, id))
+        mydb.commit()
+
+        # Close the cursor and connection
+        cursor.close()
+        mydb.close()
+
+        response = {"message": "Password updated successfully"}
+        return jsonify(response), 200
+
+    except mysql.connector.Error as db_error:
+        error_response = {"error": "Database error: " + str(db_error)}
+        return jsonify(error_response), 500
+
+    except KeyError:
+        error_response = {"error": "Invalid data format"}
+        return jsonify(error_response), 400
+
+    except Exception as e:
+        error_response = {"error": str(e)}
+        return jsonify(error_response), 500
+        
 if __name__ == '__main__':
     app.run(debug=True,port=8888)
 
