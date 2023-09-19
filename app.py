@@ -355,7 +355,7 @@ def coursedetails(StudentID):
 
     except Exception as e:
         return str(e), 500
-@app.route('/forget_password/<int:id>', methods=['PUT'])
+
 
     
    
