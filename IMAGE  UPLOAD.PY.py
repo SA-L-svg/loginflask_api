@@ -4,7 +4,7 @@ import os
 import requests
 import mysql.connector
 from flask import Flask, request, jsonify
-# from google.cloud import storage
+
 from mysql.connector import connect
 import base64
 
@@ -47,11 +47,7 @@ def upload_image():
 
         conn.commit()
         
-        # # Upload the image to the Google Cloud Storage bucket
-        # client = storage.Client()
-        # bucket = client.get_bucket('my-bucket')
-        # blob = bucket.blob(Image_file.filename)
-        # blob.upload_from_file(Image_file)
+ 
         
         return jsonify({'message': 'Image uploaded successfully'})
 
