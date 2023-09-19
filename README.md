@@ -2,9 +2,10 @@
 STUDENT MANAGEMENT SYSTEM  using Flaskapi and Mysql Python project BACKEND OPERATION
 
 HI,
-Project Title: login page api Flask Framework and mysql with Python project
-Main Purpose : If you enter the email and password in login form.
-sometime error will be raised because the your not correct email like your missing '@' this symbol so dispay the error
+Project Title: 
+STUDENT MANAGEMENT SYSTEM  using Flaskapi and Mysql Python project BACKEND OPERATION
+Primary Purpose: You enter the email and password in the login form.
+sometime errors will be raised because your not correct email like you missing '@' symbol so display the error
 example
 
 import re
