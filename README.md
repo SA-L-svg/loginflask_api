@@ -1,5 +1,5 @@
-# loginflask_api
-Login Email and password validation using Flaskapi and Mysql Python project
+
+STUDENT MANAGEMENT SYSTEM  using Flaskapi and Mysql Python project BACKEND OPERATION
 
 HI,
 Project Title: login page api Flask Framework and mysql with Python project
