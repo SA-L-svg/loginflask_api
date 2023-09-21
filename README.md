@@ -1,9 +1,9 @@
 
-STUDENT MANAGEMENT SYSTEM  using Flaskapi and Mysql Python project BACKEND OPERATION
+Secure API User Registration and Management with Flask and MySQL
 
 HI,
 Project Title: 
-STUDENT MANAGEMENT SYSTEM  using Flaskapi and Mysql Python project BACKEND OPERATION
+Secure API User Registration and Management with Flask and MySQL
 Primary Purpose: You enter the email and password in the login form.
 sometime errors will be raised because your not correct email like you missing '@' symbol so display the error
 example
